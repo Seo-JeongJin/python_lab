@@ -28,7 +28,8 @@ for row in board:
 print()
 
 # 게임 시작
-count = 1
+count = 0
+
 while True:
     count += 1
     random_number = random.randint(1, 36)
@@ -41,12 +42,15 @@ while True:
         for j in range(n):
             if board[i][j] == random_number:
                 board[i][j] = "*"
-     
+    
+    print("\nCurrent Bingo Board")
     for row in board:
         for cell in row:
             print(str(cell).rjust(2), end=" ")
         print()
     print()
+    
+    bingo = 0
     
     for i in range(n):
         is_bingo = True
@@ -85,6 +89,6 @@ while True:
         bingo += 1
         
     
-    if  is_bingo >= 2:
+    if bingo >= 2:
         print("Congratulations! You've won the game with 2 or more bingos!") 
         break
