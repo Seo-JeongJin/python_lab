@@ -25,7 +25,6 @@ for row in board:
     for cell in row:
         print(str(cell).rjust(2), end=" ")
     print()
-print()
 
 # 게임 시작
 count = 0
@@ -88,7 +87,6 @@ while True:
     if is_bingo:
         bingo += 1
         
-    
     if bingo >= 2:
         print("Congratulations! You've won the game with 2 or more bingos!") 
         break
