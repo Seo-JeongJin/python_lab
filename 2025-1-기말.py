@@ -36,18 +36,18 @@ def print_all_students():
     for std_id, info in students.items():
         print(f"{std_id}\t{info['이름']}\t{info['국어']}\t{info['영어']}\t{info['수학']}\t{info['합계']}\t{info['평균']:.2f}")
 
-def check_student():
+def search_student():
     std_id = int(input("조회할 학번을 입력: "))
     if std_id in students:
         print(f"""
 [ 학생 정보 ]
 학번: {std_id}
 이름: {students[std_id]['이름']}
-"국어: {students[std_id]['국어']}
-"영어: {students[std_id]['영어']}
-"수학: {students[std_id]['수학']}
-"합계: {students[std_id]['합계']}
-"평균: {students[std_id]['평균']:.2f}""")
+국어: {students[std_id]['국어']}
+영어: {students[std_id]['영어']}
+수학: {students[std_id]['수학']}
+합계: {students[std_id]['합계']}
+평균: {students[std_id]['평균']:.2f}""")
         
     else:
         print("해당 학번의 학생 정보가 없습니다.")
@@ -77,7 +77,7 @@ def main():
         elif choice == '2':
             print_all_students()
         elif choice == '3':
-            check_student()
+            search_student()
         elif choice == '4':
             delete_student()
         elif choice == '5':
